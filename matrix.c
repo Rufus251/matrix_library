@@ -49,6 +49,7 @@ struct matrix matCreateSingle(int lenhigh){
 }
 struct matrix matCreateRand(int len, int high, int lg, int pg){
     struct matrix arr;
+    srand(time(NULL));
     arr.len = len;
     arr.high = high;
     arr.arr = (int**)malloc(sizeof(int*)*high);
@@ -151,7 +152,7 @@ struct matrix matCreateInv(struct matrix arr){
     }
     if (matDet(arr) == 0){
         matrix arr1 = {-1, -1, NULL};
-        printf("ERROR! Adj = 0\n");
+        printf("ERROR! det = 0\n");
         return arr1;
     }
     struct matrix arrAdj = matCreateCopy(arr);

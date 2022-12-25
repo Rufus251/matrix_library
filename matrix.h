@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <malloc.h>
-
+#include <time.h>
 typedef struct matrix{
     int len;
     int high;
